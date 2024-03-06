@@ -36,6 +36,7 @@
     grid-area: header;
     background: $card_color_header;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,6 +55,7 @@
     border-radius: 0 0 30px 30px;
     background: $card_color_main;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     text-align: justify;
     font-size: clamp(1rem, 2.9vw, 1.875rem);
     &--path{

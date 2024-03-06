@@ -1,5 +1,5 @@
 .home {
-    height: 93vh;
+    height: 94vh;
     width:100%;
     background: $background_section1;
 
@@ -123,17 +123,19 @@
     margin-block: 57px 100px;
 }
 
+.home-main-text-start{
+    display: none;
+}
+
 .home-main-start{
-    position: absolute;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    
     flex-direction: row;
 
     width: 167px;
     height: 50px;
-    left: calc(50% - 167px/2);
-    bottom: 150px;
     p{
         font-size: 1.25rem;
     }
@@ -173,6 +175,7 @@
 @media screen and (min-width: 824px){
     .home{
         grid-template-rows: 78px auto 45px;
+        height: 100vh;
     }
 
     .home-header{
@@ -210,11 +213,23 @@
         margin-left: 150px;
     }
 
-    .home-main-start{
+    .home-main-text-start{
         position: relative;
-        align-self: flex-start;
-        margin-left: 0;
-        top: 70px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        top: 40px;
+
+        width: 167px;
+        height: 50px;
+        p{
+            font-size: 1.25rem;
+        }
+    
+        svg{
+            width: 16px;
+        }
     }
 }
 
@@ -238,7 +253,9 @@
         width: 300px;
     }
 
-    .home-main-start{
+    .home-main-text-start{
+
+        top: 20px;
         width: 200px;
         height: 66px;
         p{
@@ -286,7 +303,8 @@
         }
     }
 
-    .home-main-start{
+    .home-main-text-start{
+        top: 40px;
         width: 250px;
         height: 76px;
         p{
