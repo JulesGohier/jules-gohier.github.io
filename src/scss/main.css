@@ -353,6 +353,11 @@ body {
     font-size: 1.05rem;
   }
 }
+@media screen and (min-width: 412px) {
+  .about-window-content {
+    font-size: 1.15rem;
+  }
+}
 @media screen and (min-width: 670px) {
   .about-window-content {
     font-size: 1.5rem;
