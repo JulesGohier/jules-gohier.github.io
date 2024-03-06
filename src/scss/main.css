@@ -401,7 +401,7 @@ body {
 .skills {
   height: 210vh;
   width: 100%;
-  background-color: antiquewhite;
+  background: linear-gradient(180deg, rgb(233, 228, 240) 0%, rgb(211, 204, 227) 100%);
   display: flex;
   justify-content: center;
   align-content: center;
