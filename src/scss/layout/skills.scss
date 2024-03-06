@@ -8,6 +8,9 @@
     align-content: center;
     flex-wrap: wrap;
     gap: 50px;
+    overflow: hidden;
+    
+    position: relative;
 
     & > h1 {
         text-transform: uppercase;
@@ -15,19 +18,36 @@
     }
 }
 
+.skills-img-spiral{
+    position: absolute;
+    top: -20px;
+    right: -70px;
+    width: 200px;
+}
+
+.skills-img-wave{
+    position: absolute;
+    bottom: 30px;
+    left: -40px;
+    width: 120px;
+}
+
 .skills-cards{
+    z-index: 1;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 65px auto 5px;
+    grid-template-rows: 65px auto 50px;
     grid-template-areas:
         "header"
         "main"
         "footer";
 
     background-color: $card-color_main;
-
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
     width: 350px;
-    height: 486px;
+    height: 550px;
 
     border-radius: 20px;
 }
@@ -74,12 +94,15 @@
 
 .skills-cards-wave{
     grid-area: footer;
+
+    &>svg{
+        width: 350px;
+    }
 }
 
 @media screen and (min-width: 550px) {
     .skills{
-        height: 225vh;
-        position: relative;
+        height: 220vh;
         
         &> h1{
             position: absolute;
@@ -87,12 +110,24 @@
             left: calc(50% - 171px/2);
         }
     }
+
+    .skills-img-spiral{
+        top: -30px;
+        right: -100px;
+        width: 300px;
+    }
+    
+    .skills-img-wave{
+        bottom: 50px;
+        left: -40px;
+        width: 150px;
+    }
    
 }
 
 @media screen and (min-width: 750px) {
     .skills{
-        height: 160vh;
+        height: 150vh;
         align-content: center;
         position: relative;
         
@@ -108,5 +143,33 @@
 @media screen and (min-width: 1150px) {
     .skills{
         height: 100vh;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .skills{
+        height: 100vh;
+        
+    }
+    .skills-cards{
+        width: 400px;
+    }
+
+    .skills-cards-wave{
+        &>svg{
+            width: 400px;
+        }
+    }
+
+    .skills-img-spiral{
+        top: -60px;
+        right: -130px;
+        width: 400px;
+    }
+    
+    .skills-img-wave{
+        bottom: 30px;
+        left: -40px;
+        width: 200px;
     }
 }

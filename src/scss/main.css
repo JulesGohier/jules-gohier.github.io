@@ -24,7 +24,7 @@ body {
 }
 
 .home {
-  height: 94vh;
+  height: 90vh;
   width: 100%;
   background: linear-gradient(180deg, rgb(211, 204, 227) 0%, rgb(233, 228, 240) 100%);
   display: grid;
@@ -212,6 +212,9 @@ body {
     width: 250px;
     filter: drop-shadow(0px 0px 150px #F15152);
     margin-left: 150px;
+  }
+  .home-main-start {
+    display: none;
   }
   .home-main-text-start {
     position: relative;
@@ -404,20 +407,39 @@ body {
   align-content: center;
   flex-wrap: wrap;
   gap: 50px;
+  overflow: hidden;
+  position: relative;
 }
 .skills > h1 {
   text-transform: uppercase;
   font-size: 3.125rem;
 }
 
+.skills-img-spiral {
+  position: absolute;
+  top: -20px;
+  right: -70px;
+  width: 200px;
+}
+
+.skills-img-wave {
+  position: absolute;
+  bottom: 30px;
+  left: -40px;
+  width: 120px;
+}
+
 .skills-cards {
+  z-index: 1;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 65px auto 5px;
+  grid-template-rows: 65px auto 50px;
   grid-template-areas: "header" "main" "footer";
   background-color: rgba(29, 51, 84, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   width: 350px;
-  height: 486px;
+  height: 550px;
   border-radius: 20px;
 }
 
@@ -458,21 +480,33 @@ body {
 .skills-cards-wave {
   grid-area: footer;
 }
+.skills-cards-wave > svg {
+  width: 350px;
+}
 
 @media screen and (min-width: 550px) {
   .skills {
-    height: 225vh;
-    position: relative;
+    height: 220vh;
   }
   .skills > h1 {
     position: absolute;
     top: 15px;
     left: calc(50% - 85.5px);
   }
+  .skills-img-spiral {
+    top: -30px;
+    right: -100px;
+    width: 300px;
+  }
+  .skills-img-wave {
+    bottom: 50px;
+    left: -40px;
+    width: 150px;
+  }
 }
 @media screen and (min-width: 750px) {
   .skills {
-    height: 160vh;
+    height: 150vh;
     align-content: center;
     position: relative;
   }
@@ -486,6 +520,27 @@ body {
 @media screen and (min-width: 1150px) {
   .skills {
     height: 100vh;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .skills {
+    height: 100vh;
+  }
+  .skills-cards {
+    width: 400px;
+  }
+  .skills-cards-wave > svg {
+    width: 400px;
+  }
+  .skills-img-spiral {
+    top: -60px;
+    right: -130px;
+    width: 400px;
+  }
+  .skills-img-wave {
+    bottom: 30px;
+    left: -40px;
+    width: 200px;
   }
 }
 .contact {
