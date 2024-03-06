@@ -24,7 +24,7 @@ body {
 }
 
 .home {
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   background: linear-gradient(180deg, rgb(211, 204, 227) 0%, rgb(233, 228, 240) 100%);
   display: grid;
@@ -143,8 +143,8 @@ body {
   flex-direction: row;
   width: 167px;
   height: 50px;
-  bottom: 120px;
-  margin-left: 70.5px;
+  left: calc(50% - 83.5px);
+  bottom: 150px;
 }
 .home-main-start p {
   font-size: 1.25rem;
@@ -348,6 +348,11 @@ body {
   color: #275862;
 }
 
+@media screen and (min-width: 375px) {
+  .about-window-content {
+    font-size: 1.05rem;
+  }
+}
 @media screen and (min-width: 670px) {
   .about-window-content {
     font-size: 1.5rem;

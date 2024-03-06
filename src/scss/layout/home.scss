@@ -1,5 +1,5 @@
 .home {
-    height: 100vh;
+    height: 95vh;
     width:100%;
     background: $background_section1;
 
@@ -132,9 +132,8 @@
 
     width: 167px;
     height: 50px;
-
-    bottom: 120px;
-    margin-left: 70.5px;
+    left: calc(50% - 167px/2);
+    bottom: 150px;
     p{
         font-size: 1.25rem;
     }
@@ -169,8 +168,6 @@
       transform: translateX(calc(-100% - 30px));
     }
   }
-
-
 
 
 @media screen and (min-width: 824px){

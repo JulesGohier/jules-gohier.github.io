@@ -55,6 +55,12 @@
     }
 }
 
+@media screen and (min-width: 375px){
+    .about-window-content{
+        font-size: 1.05rem;
+    }
+}
+
 @media screen and (min-width: 670px){
     .about-window-content{
         font-size: 1.5rem;
