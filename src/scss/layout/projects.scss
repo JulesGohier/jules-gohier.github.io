@@ -1,5 +1,194 @@
 .projects {
     height: 100vh;
     width: 100%;
-    background: peru;
+    //background: $background_section1;
+    background-color: antiquewhite;
+    overflow: hidden;
+}
+
+.projects-carousel{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.projects-carousel-list{
+    display: flex;
+    width: 100%;
+    height: 700px;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+}
+
+.projects-carousel-list-item{
+    width: 340px;
+    height: 680px;
+    background-color: $card_color_main;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(80px);
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.3);
+    position: absolute;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 180px 50px 50px auto 50px 80px;
+    grid-template-areas: 
+        "picture picture"
+        "orign orign"
+        "name name"
+        "description description"
+        "code language"
+        "wave wave"
+    ;
+    overflow: hidden;
+    transition: all 0.3s ease-in;
+}
+
+.projects-carousel-list-item-picture{
+    grid-area: picture;
+    overflow: hidden;
+
+    & > img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+.projects-carousel-list-item-orign{
+    grid-area: orign;
+    font-size: 1rem;
+    margin-left: 20px;
+
+    display: flex;
+    align-items: center;
+    color: #42526A;
+}
+
+.projects-carousel-list-item-name{
+    grid-area: name;
+    font-size: 1.8rem;
+    margin-left: 20px;
+    display: flex;
+    align-self: center;
+    
+}
+
+.projects-carousel-list-item-description{
+    grid-area: description;
+    margin: 10px 20px 0 20px;
+    color: #42526A;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.projects-carousel-list-item-code{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    grid-area: code;
+    & > img{
+        object-fit: contain;
+        margin-right: 20px;
+    }
+
+    & > img:first-child{
+        width: 30px;
+    } 
+
+    & > img:nth-child(2){
+        width: 20px;
+    }
+}
+
+.projects-carousel-list-item-language{
+    margin-right: 24px;
+    grid-area: language;
+    font-size: 1.15rem;
+    color: #42526A;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.projects-carousel-list-item-wave{
+    grid-area: wave;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+.projects-carousel-list-item[data-position="0"] {
+    z-index: 5;
+}
+.projects-carousel-list-item[data-position="1"] {
+transform: translateX(-55%) scale(0.9);
+z-index: 4;
+}
+.projects-carousel-list-item[data-position="-1"] {
+transform: translateX(55%) scale(0.9);
+z-index: 4;
+}
+.projects-carousel-list-item[data-position="2"] {
+transform: translateX(-100%) scale(0.8);
+z-index: 3;
+}
+.projects-carousel-list-item[data-position="-2"] {
+transform: translateX(100%) scale(0.8);
+z-index: 3;
+}
+
+@media screen and (min-width: 900px){
+    .projects-carousel-list-item{
+        width: 465px;
+        height: 700px;
+        grid-template-rows: 250px 50px 50px auto 50px 80px;
+        border-radius: 30px;
+    }
+
+    .projects-carousel-list-item-picture{
+        & > img {
+            width: 100%;
+        }
+    }
+
+    .projects-carousel-list-item-orign{
+        font-size: 1.25rem;
+        margin-left: 24px;
+    }
+
+    .projects-carousel-list-item-name{
+        font-size: 2.188rem;
+        margin-left: 24px;
+    }
+
+    .projects-carousel-list-item-description{
+        grid-area: description;
+        margin: 15px 25px 0 25px;
+        font-size: 1.25rem;
+    }
+
+    .projects-carousel-list-item-code{
+        margin-left: 25px;
+        & > img{
+            margin-right: 25px;
+        }
+    
+        & > img:first-child{
+            width: 40px;
+        } 
+    
+        & > img:nth-child(2){
+            width: 30px;
+        }
+    }
+
+    .projects-carousel-list-item-language{
+        margin-right: 25px;
+        grid-area: language;
+        font-size: 1.25rem;
+    }
 }
