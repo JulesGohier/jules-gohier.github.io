@@ -318,7 +318,8 @@ body {
   display: grid;
   grid-template-rows: 57px auto;
   grid-template-areas: "header" "main";
-  max-height: 800px;
+  max-height: 700px;
+  min-height: 500px;
   max-width: 1250px;
   margin-left: 30px;
   margin-right: 30px;
@@ -345,8 +346,8 @@ body {
   background: rgba(29, 51, 84, 0.1);
   backdrop-filter: blur(10px);
   text-align: justify;
-  font-size: clamp(1.1rem, 2.9vw, 1.875rem);
-  max-height: 743px;
+  font-size: clamp(1rem, 2.9vw, 1.875rem);
+  max-height: 693px;
 }
 .about-window-content--path {
   color: #275862;

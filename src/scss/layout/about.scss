@@ -24,7 +24,8 @@
         "header"
         "main";
 
-    max-height: 800px;
+    max-height: 700px;
+    min-height: 500px;
     max-width: 1250px;
 
     margin-left: 30px;
@@ -54,12 +55,12 @@
     background: $card_color_main;
     backdrop-filter: blur(10px);
     text-align: justify;
-    font-size: clamp(1.1rem, 2.9vw, 1.875rem);
+    font-size: clamp(1rem, 2.9vw, 1.875rem);
     &--path{
         color: #275862;
     }
 
-    max-height: calc(800px - 57px);
+    max-height: calc(750px - 57px);
 }
 
 @media screen and (min-width: 824px){
