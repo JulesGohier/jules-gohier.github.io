@@ -1,5 +1,5 @@
 .home {
-    height: 90vh;
+    height: 97vh;
     width:100%;
     background: $background_section1;
 
@@ -96,12 +96,12 @@
     flex-direction: column;
     h1{
         text-transform: uppercase;
-        font-size: 2.7rem;
-        margin-block: 20px;
+        font-size: 2.5rem;
+        margin-block: 10px;
     }
 
     h2{
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     h2::first-letter{
@@ -171,7 +171,6 @@
     }
   }
 
-
 @media screen and (min-width: 824px){
     .home{
         grid-template-rows: 78px auto 45px;
@@ -204,6 +203,17 @@
     .home-main{
         flex-direction: row;
         justify-content: center;
+    }
+
+    .home-main-text{
+        h1{
+            font-size: 2.7rem;
+            padding-block: 20px;
+        }
+    
+        h2{
+            font-size: 1.25rem;
+        }
     }
 
     .home-main-logo{

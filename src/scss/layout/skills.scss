@@ -1,5 +1,5 @@
 .skills {
-    height: 210vh;
+    height: 260vh;
     width: 100%; 
     background: $background_section2;
     display: flex;
@@ -101,7 +101,7 @@
 
 @media screen and (min-width: 550px) {
     .skills{
-        height: 220vh;
+        //height: 220vh;
         
         &> h1{
             position: absolute;
@@ -126,7 +126,7 @@
 
 @media screen and (min-width: 750px) {
     .skills{
-        height: 150vh;
+        height: 180vh;
         align-content: center;
         position: relative;
         
@@ -147,7 +147,7 @@
 
 @media screen and (min-width: 1300px) {
     .skills{
-        height: 100vh;
+        height: 120vh;
         
     }
     .skills-cards{

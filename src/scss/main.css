@@ -24,7 +24,7 @@ body {
 }
 
 .home {
-  height: 90vh;
+  height: 97vh;
   width: 100%;
   background: linear-gradient(180deg, rgb(211, 204, 227) 0%, rgb(233, 228, 240) 100%);
   display: grid;
@@ -112,11 +112,11 @@ body {
 }
 .home-main-text h1 {
   text-transform: uppercase;
-  font-size: 2.7rem;
-  margin-block: 20px;
+  font-size: 2.5rem;
+  margin-block: 10px;
 }
 .home-main-text h2 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .home-main-text h2::first-letter {
   text-transform: uppercase;
@@ -206,6 +206,13 @@ body {
   .home-main {
     flex-direction: row;
     justify-content: center;
+  }
+  .home-main-text h1 {
+    font-size: 2.7rem;
+    padding-block: 20px;
+  }
+  .home-main-text h2 {
+    font-size: 1.25rem;
   }
   .home-main-logo {
     height: 250px;
@@ -393,10 +400,18 @@ body {
   }
 }
 .projects {
-  height: 100vh;
+  height: 130vh;
   width: 100%;
-  background-color: antiquewhite;
+  background: linear-gradient(180deg, rgb(211, 204, 227) 0%, rgb(233, 228, 240) 100%);
   overflow: hidden;
+  position: relative;
+}
+.projects > h1 {
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 126.85px);
+  text-transform: uppercase;
+  font-size: 3.125rem;
 }
 
 .projects-carousel {
@@ -416,17 +431,15 @@ body {
 }
 
 .projects-carousel-list-item {
-  width: 340px;
-  height: 680px;
-  background-color: rgba(29, 51, 84, 0.1);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(80px);
+  width: 255px;
+  height: 550px;
+  background-color: rgb(211, 204, 227);
   border-radius: 30px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   position: absolute;
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 180px 50px 50px auto 50px 80px;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 180px 30px 30px auto 50px 80px;
   grid-template-areas: "picture picture" "orign orign" "name name" "description description" "code language" "wave wave";
   overflow: hidden;
   transition: all 0.3s ease-in;
@@ -443,7 +456,7 @@ body {
 
 .projects-carousel-list-item-orign {
   grid-area: orign;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-left: 20px;
   display: flex;
   align-items: center;
@@ -452,7 +465,7 @@ body {
 
 .projects-carousel-list-item-name {
   grid-area: name;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-left: 20px;
   display: flex;
   align-self: center;
@@ -462,7 +475,7 @@ body {
   grid-area: description;
   margin: 10px 20px 0 20px;
   color: #42526A;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   text-align: justify;
 }
 
@@ -484,9 +497,9 @@ body {
 }
 
 .projects-carousel-list-item-language {
-  margin-right: 24px;
+  margin-right: 20px;
   grid-area: language;
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   color: #42526A;
   display: flex;
   align-items: center;
@@ -525,6 +538,9 @@ body {
 }
 
 @media screen and (min-width: 900px) {
+  .projects {
+    height: 100vh;
+  }
   .projects-carousel-list-item {
     width: 465px;
     height: 700px;
@@ -566,7 +582,7 @@ body {
   }
 }
 .skills {
-  height: 210vh;
+  height: 260vh;
   width: 100%;
   background: linear-gradient(180deg, rgb(233, 228, 240) 0%, rgb(211, 204, 227) 100%);
   display: flex;
@@ -652,9 +668,6 @@ body {
 }
 
 @media screen and (min-width: 550px) {
-  .skills {
-    height: 220vh;
-  }
   .skills > h1 {
     position: absolute;
     top: 15px;
@@ -673,7 +686,7 @@ body {
 }
 @media screen and (min-width: 750px) {
   .skills {
-    height: 150vh;
+    height: 180vh;
     align-content: center;
     position: relative;
   }
@@ -691,7 +704,7 @@ body {
 }
 @media screen and (min-width: 1300px) {
   .skills {
-    height: 100vh;
+    height: 120vh;
   }
   .skills-cards {
     width: 400px;
